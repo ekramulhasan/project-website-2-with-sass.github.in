@@ -1,0 +1,39 @@
+.header-area {
+    padding: 20px 0;
+
+    .logo {
+        float: left;
+        width: 220px;
+
+        a {
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 21px;
+        }
+    }
+
+    .menu {
+        float: right;
+        width: 945px;
+        margin-left: 30px;
+
+        ul {
+            text-align: right;
+
+            li {
+                display: inline-block;
+
+                a {
+                    margin-left: 20px;
+                    font-weight: 500;
+                    font-size: 18px;
+
+                    &:hover {
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+
+}

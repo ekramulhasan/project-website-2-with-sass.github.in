@@ -1,0 +1,147 @@
+@import 'color';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.main{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+a{
+    text-decoration: none;
+    color: $black;
+    transition: .3s;
+}
+
+
+img{
+    width: 100%;
+    vertical-align: middle;
+}
+
+ul{
+    list-style: none;
+}
+
+// margine and padding
+
+@for $i from 1 through 10{
+
+    .pt-#{$i * 10}{
+        padding-top: $i * 10px;
+    }
+
+    .pb-#{$i * 10}{
+        padding-bottom: $i * 10px;
+    }
+
+    .mt-#{$i * 10}{
+        margin-top: $i * 10;
+    }
+
+    .mb-#{$i * 10}{
+        margin-bottom: $i * 10;
+    }
+
+}
+
+$list: left, right, center, justify;
+
+@each $i in $list{
+
+    .text-#{$i}{
+        text-align: $i;
+    }
+}
+
+.fix::before, .fix::after{
+    content: "";
+    display: table;
+    clear: both; 
+}
+
+
+// background css
+.bg{
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 2;
+
+    &::before{
+        position: absolute;
+        content: "";
+        background-color: $black;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        opacity: .70;
+        z-index: -1;
+    }
+}
+
+// botton css
+.btn{
+    padding: 10px 30px;
+    font-size: 18px;
+    color: $white;
+    display: inline-block;
+    text-transform: capitalize;
+    border-radius: 3px;
+    
+
+    &.box-btn{
+        background-color: $primary-color;
+        transition: .3s;
+        &:hover{
+            background-color: $black;
+        }
+    }
+
+    &.border-btn{
+        border: 2px solid $primary-color;
+        padding: 8px 30px;
+        transition: .3s;
+        &:hover{
+            background-color: $black;
+            border-color: $black;
+        }
+    }
+}
+
+//about section-title
+.section-title {
+    margin-bottom: 60px;
+    h4{
+        
+    font-size: 45px;
+    text-transform: capitalize;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+
+    &::before{
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 2px;
+    background-color: $primary-color;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    }
+    }
+
+    p{
+        max-width: 400px;
+        margin: 0 auto;
+    }
+  }
+  

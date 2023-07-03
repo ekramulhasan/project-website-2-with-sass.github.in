@@ -1,0 +1,31 @@
+
+
+.sigle-portfolio {
+    height: 250px;
+    background-position: center;
+    background-size: cover;
+    width: 370px;
+    float: left;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    position: relative;
+
+    &:last-child{
+        margin-right: 0;
+    }
+
+    h4{
+
+        background-color: #333;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    color: white;
+    text-transform: capitalize;
+    padding: 20px 0;
+    font-size: 22px;
+
+    }
+  }
