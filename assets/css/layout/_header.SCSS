@@ -1,5 +1,31 @@
 .header-area {
     padding: 20px 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    background-color: #fff;
+
+    &.sticky {
+
+        background-color: #333;
+
+        .menu{
+
+            a{
+                color: #fff;
+            }
+        }
+
+        .logo{
+            a{
+                color: #fff;
+            }
+        }
+      }
+
+     
+
 
     .logo {
         float: left;
@@ -31,6 +57,13 @@
                     &:hover {
                         color: $primary-color;
                     }
+                }
+
+                &.current {
+            
+                        a{
+                            color: tomato;
+                        }
                 }
             }
         }

@@ -309,6 +309,20 @@ body {
 
 .header-area {
   padding: 20px 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background-color: #fff;
+}
+.header-area.sticky {
+  background-color: #333;
+}
+.header-area.sticky .menu a {
+  color: #fff;
+}
+.header-area.sticky .logo a {
+  color: #fff;
 }
 .header-area .logo {
   float: left;
@@ -338,6 +352,9 @@ body {
 .header-area .menu ul li a:hover {
   color: orange;
 }
+.header-area .menu ul li.current a {
+  color: tomato;
+}
 
 .footer-area {
   background-color: #333;
@@ -352,13 +369,14 @@ body {
 
 .banner-content {
   color: white;
+  margin-top: 50px;
 }
 .banner-content h2 {
   font-size: 45px;
   text-transform: capitalize;
 }
 .banner-content p {
-  max-width: 400px;
+  max-width: 419px;
   margin: 30px auto;
 }
 .banner-content a {
